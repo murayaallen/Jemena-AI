@@ -24,10 +24,6 @@ app.post('/api/data', (req, res) => {
   res.json({ message: 'Data received!', data });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
 // Validate API Key
 if (!GEMINI_API_KEY) {
   console.error('Error: GEMINI_API_KEY is missing from .env file');
